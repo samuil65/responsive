@@ -29,11 +29,29 @@ class InActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(image: allExpensesItemModel.image),
           Gap(34),
-          Text(allExpensesItemModel.title, style: AppStyles.styleMedium16),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleMedium16(context),
+            ),
+          ),
           Gap(8),
-          Text(allExpensesItemModel.date, style: AppStyles.styleRegular12),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular12(context),
+            ),
+          ),
           Gap(16),
-          Text(allExpensesItemModel.price, style: AppStyles.styleSemiBold24),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
+          ),
         ],
       ),
     );
@@ -52,7 +70,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
       decoration: const ShapeDecoration(
         color: AppColor.lightBlueColor,
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: Color(0xFFf1f1f1), width: 1),
+          side: BorderSide(color: AppColor.lightBlueColor, width: 1),
           borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
       ),
@@ -66,22 +84,33 @@ class ActiveAllExpensesItem extends StatelessWidget {
             iconColor: AppColor.whiteColor,
           ),
           Gap(34),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyles.styleMedium16.copyWith(color: AppColor.whiteColor),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleMedium16(
+                context,
+              ).copyWith(color: AppColor.whiteColor),
+            ),
           ),
           Gap(8),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyles.styleRegular12.copyWith(
-              color: AppColor.whiteColor,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular12(
+                context,
+              ).copyWith(color: AppColor.whiteColor),
             ),
           ),
           Gap(16),
-          Text(
-            allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(
-              color: AppColor.whiteColor,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyles.styleSemiBold24(
+                context,
+              ).copyWith(color: AppColor.whiteColor),
             ),
           ),
         ],

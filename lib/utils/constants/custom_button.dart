@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: AppColor.lightBlueColor,
         ),
         onPressed: () {},
-        child: Text('Send Money', style: AppStyles.styleSemiBold18),
+        child: Text('Send Money', style: AppStyles.styleSemiBold18(context)),
       ),
     );
   }

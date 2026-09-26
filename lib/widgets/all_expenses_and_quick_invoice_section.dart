@@ -8,6 +8,6 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [Gap(40), AllExpenses(), Gap(24), QuickInvoice()]);
+    return Column(children: [AllExpenses(), Gap(24), QuickInvoice()]);
   }
 }

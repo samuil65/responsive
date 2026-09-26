@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:responsive/utils/styles/app_styles.dart';
 
 class CustomDropdown<T> extends StatefulWidget {
   final T value;
@@ -63,11 +64,7 @@ class _CustomDropdownState<T> extends State<CustomDropdown<T>> {
               widget.labelBuilder(item),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                color: Color(0xff064061),
-              ),
+              style: AppStyles.styleMedium16(context),
             ),
           );
         }).toList(),

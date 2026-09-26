@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:responsive/models/all_expenses_item_model.dart';
 import 'package:responsive/utils/styles/app_images.dart';
 import 'package:responsive/widgets/all_expenses_item.dart';
@@ -35,26 +36,43 @@ class _AllExpensesBodyState extends State<AllExpensesBody> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return Expanded(
-          child: Padding(
-            padding: index == 1
-                ? const EdgeInsets.symmetric(horizontal: 12.0)
-                : EdgeInsets.zero,
-            child: GestureDetector(
-              onTap: () {
-                updateIndex(index);
-              },
-              child: AllExpensesItem(
-                allExpensesItemModel: item,
-                isSelected: index == selectedIndex,
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        Gap(8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        Gap(8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
