@@ -6,9 +6,9 @@ class Assets {
   /// assets/images/balance_icon.svg
   static const String imagesBalanceIcon = "assets/images/balance_icon.svg";
 
-  /// Assets for imagesCard
-  /// assets/images/card.svg
-  static const String imagesCard = "assets/images/card.svg";
+  /// Assets for imagesCard2
+  /// assets/images/card2.png
+  static const String imagesCard2 = "assets/images/card2.png";
 
   /// Assets for imagesDashboardIcon
   /// assets/images/dashboard_icon.svg
